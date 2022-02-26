@@ -23,6 +23,7 @@ function App() {
 },{
     label: "Tab ",
     content: "This is the content for tab 4"
+    
 }]
 
  useEffect(() => {

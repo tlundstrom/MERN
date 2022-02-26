@@ -6,8 +6,9 @@ const Tabs = (props) => {
     const {tabs} = props;
     const {selected, setSelected} = props;
 
-   const tabHandler = (index) => {
+   const tabHandler = (e, index) => {
     setSelected(tabs[index]);
+    e.target.className = "Selected";
    }
 
     return (
@@ -17,8 +18,11 @@ const Tabs = (props) => {
                     style = {{ 
                         display : "inline-block",
                         margin : "15px",
+                        padding:"10px",
+                        border:"1px solid black",
+                        borderRadius:"10px",
                         }}
-                    onClick = {(e) =>tabHandler(index)}>
+                    onClick = {(e) =>tabHandler(e, index)}>
                         <p>{tab.label + (index +1)}</p>
                     </div>
                     
