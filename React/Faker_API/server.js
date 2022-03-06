@@ -8,6 +8,7 @@ app.use( express.urlencoded({ extended: true }) );
 
 const createUser= () => {
     const newFake = {
+        _id: faker.datatype.uuid(),
         firstName : faker.name.firstName(),
         lastName : faker.name.lastName(),
         phoneNumber : faker.phone.phoneNumber(),
@@ -21,6 +22,7 @@ const createCompany = () => {
     const newCompany = {
         name: faker.company.companyName(),
         address: {
+            _id: faker.datatype.uuid(),
             street: faker.address.streetAddress(),
             city: faker.address.cityName(),
             state: faker.address.state(),
