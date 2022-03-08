@@ -13,8 +13,8 @@ module.exports.findAllJokes = (req, res) => {
 }
 
 module.exports.findOneJoke = (req, res) => {
-    console.log(req.params.id);
-    console.log(req.params);
+    // console.log(req.params.id);
+    // console.log(req.params);
     Joke.findById(req.params.id)
         .then(oneJoke => {
             console.log('Find Joke was successful');
