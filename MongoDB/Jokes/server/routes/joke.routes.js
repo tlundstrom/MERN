@@ -2,8 +2,8 @@ const JokeController = require('../controllers/joke.controller');
 
 module.exports = app => {
     app.get('/api/jokes', JokeController.findAllJokes);
-    app.get('/api/jokes/:_id', JokeController.findOneSingleJoke);
-    app.put('/api/jokes/:_id', JokeController.updateExistingJoke);
+    app.get('/api/jokes/:id', JokeController.findOneJoke);
+    app.put('/api/jokes/:id', JokeController.updateExistingJoke);
     app.post('/api/jokes', JokeController.createNewJoke);
-    app.delete('/api/jokes/:_id', JokeController.deleteAnExistingJoke);
+    app.delete('/api/jokes/:id', JokeController.deleteAnExistingJoke);
 }
